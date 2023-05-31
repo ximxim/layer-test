@@ -2,7 +2,7 @@
   "packageManager": "yarn@4.0.0-rc.15",
   "private": true,
   "name": "ximxim",
-  "version": "0.8.1",
+  "version": "0.9.1-nightly.1",
   "license": "MIT",
   "workspaces": [
     "packages/**/*"
@@ -14,6 +14,7 @@
     "tsc": "yarn workspaces foreach run tsc",
     "lint": "yarn workspaces foreach run lint",
     "build": "yarn workspaces foreach run build",
+    "deploy": "yarn workspaces foreach run deploy",
     "format:write": "prettier --write \"packages/**/*.{ts,tsx,js}\" --ignore-path .gitignore",
     "format:check": "prettier --check \"packages/**/*.{ts,tsx,js}\" --ignore-path .gitignore",
     "dev": "concurrently --names \"SDK,SDK-EXAMPLE\" -c \"bgBlue.bold,bgMagenta.bold\" \"yarn workspace @ximxim/sdk dev\" \"yarn workspace @ximxim/sdk-example dev\""
