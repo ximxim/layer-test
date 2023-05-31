@@ -2,7 +2,7 @@
   "packageManager": "yarn@4.0.0-rc.15",
   "private": true,
   "name": "ximxim",
-  "version": "0.10.0",
+  "version": "0.10.1-nightly.0",
   "license": "MIT",
   "workspaces": [
     "packages/**/*"
