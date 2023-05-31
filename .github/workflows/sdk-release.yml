@@ -29,16 +29,16 @@ jobs:
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 
-      - name: release
-        run: |
-          if [ "${GITHUB_REF}" = "refs/heads/stg" ]; then
-            yarn release --ci --verbose --preRelease=nightly
-          else
-            yarn release --ci --verbose
-          fi
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAT }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # - name: release
+      #   run: |
+      #     if [ "${GITHUB_REF}" = "refs/heads/stg" ]; then
+      #       yarn release --ci --verbose --preRelease=nightly
+      #     else
+      #       yarn release --ci --verbose
+      #     fi
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.PAT }}
+      #     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: merge main to stg
         if: github.ref == 'refs/heads/main'
