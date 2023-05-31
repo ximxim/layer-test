@@ -52,5 +52,3 @@ jobs:
       - name: example deploy
         if: github.ref == 'refs/heads/stg'
         run: yarn deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAT }}
