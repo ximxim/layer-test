@@ -1,10 +1,9 @@
-name: production
+name: sdk-release
 on:
   push:
     branches: [main]
-    paths-ignore:
-      - '**/package.json'
-      - 'packages/sdk/example/**'
+    paths:
+      - 'packages/sdk/src/**'
 jobs:
   release:
     runs-on: ubuntu-latest

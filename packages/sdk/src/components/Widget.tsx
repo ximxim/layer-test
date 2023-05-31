@@ -3,7 +3,7 @@ import AddIcon from '@mui/icons-material/Add';
 
 export const Widget = () => {
   return (
-    <Fab color="primary" aria-label="badboo">
+    <Fab color="primary" aria-label="add">
       <AddIcon />
     </Fab>
   );
