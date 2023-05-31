@@ -1,3 +1,4 @@
+.npmrc
 packages/**/dist/
 dist/
 .idea/
