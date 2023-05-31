@@ -16,6 +16,9 @@ jobs:
       - name: Install dependencies
         run: yarn
 
+      - name: Build
+        run: yarn build
+
       - name: release-it
         uses: TheRealWaldo/release-it@v0.7.2
         env:
