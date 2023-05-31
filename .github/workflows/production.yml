@@ -15,7 +15,5 @@ jobs:
 
       - name: release-it
         uses: TheRealWaldo/release-it@v0.7.2
-        with:
-          args: --ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
