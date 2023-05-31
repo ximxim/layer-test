@@ -27,7 +27,7 @@ jobs:
       - name: git config
         run: |
           git config user.name "ximxim"
-          git config user.email "azim.ahmed7@gmail.com"
+          git config user.email "azim.ahmed7@users.noreply.github.com"
 
       - name: release
         run: yarn release --ci --verbose
