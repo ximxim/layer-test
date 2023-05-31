@@ -4,11 +4,17 @@
   "name": "ximxim",
   "version": "0.10.1",
   "license": "MIT",
-  "workspaces": [
-    "packages/**/*"
-  ],
+  "workspaces": {
+    "packages": [
+      "packages/**/*"
+    ],
+    "nohoist": [
+      "husky"
+    ]
+  },
   "scripts": {
     "release": "release-it",
+    "postinstall": "husky install",
     "prepare": "husky install",
     "validate": "run-p lint tsc format:check",
     "tsc": "yarn workspaces foreach run tsc",
