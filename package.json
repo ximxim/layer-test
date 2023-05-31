@@ -8,7 +8,6 @@
     "packages/**/*"
   ],
   "scripts": {
-    "postinstall": "hustky install",
     "release": "release-it",
     "prepare": "husky install",
     "validate": "run-p lint tsc format:check",
