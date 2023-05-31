@@ -1,5 +1,12 @@
 
 
+## [0.8.0-nightly.0](https://github.com/ximxim/layer-test/compare/v0.7.0...v0.8.0-nightly.0) (2023-05-31)
+
+
+### Features
+
+* testing stg ([48e8477](https://github.com/ximxim/layer-test/commit/48e8477bab86c9d7d925ffc74212ab250bf33e8c))
+
 ## [0.7.0](https://github.com/ximxim/layer-test/compare/v0.3.1...v0.7.0) (2023-05-31)
 
 
