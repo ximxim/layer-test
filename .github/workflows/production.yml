@@ -2,6 +2,10 @@ name: production
 on:
   push:
     branches: [main]
+    paths:
+      - 'packages/**'
+    paths-ignore:
+      - 'packages/**/package.json'
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -24,7 +28,10 @@ jobs:
       - name: git config
         run: |
           git config user.name "ximxim"
-          git config user.email "azim.ahmed7@gmail.com"
+          git config user.email "ximxim@users.noreply.github.com"
+
+      - name: Setup credentials to access private repositories
+        run: git config --global url.https://${{ secrets.MY_PAT }}@github.com/.insteadOf https://github.com/
 
       - name: release
         run: npm run release
