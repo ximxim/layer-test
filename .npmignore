@@ -1,0 +1,9 @@
+# JS
+node_modules
+yarn.lock
+
+# Project files
+README.md
+
+# Example
+example/
