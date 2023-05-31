@@ -2,7 +2,7 @@
   "packageManager": "yarn@4.0.0-rc.15",
   "private": true,
   "name": "ximxim",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "workspaces": [
     "packages/**/*"
@@ -29,14 +29,14 @@
       "release": true
     },
     "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "conventionalcommits",
+        "infile": "CHANGELOG.md"
+      },
       "@release-it-plugins/workspaces": {
         "workspaces": [
           "packages/*"
         ]
-      },
-      "@release-it/conventional-changelog": {
-        "preset": "angular",
-        "infile": "CHANGELOG.md"
       }
     }
   },
