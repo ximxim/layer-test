@@ -1,7 +1,7 @@
-name: sdk-stg-release
+name: sdk-release
 on:
   push:
-    branches: [stg]
+    branches: [main, stg]
     paths:
       - 'packages/sdk/src/**'
 jobs:
@@ -29,7 +29,21 @@ jobs:
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 
       - name: release
-        run: yarn release --preRelease=nightly --ci --verbose
+        run: |
+          if [ "${GITHUB_REF}" = "refs/heads/stg" ]; then
+            yarn release --ci --verbose --preRelease=nightly
+          else
+            yarn release --ci --verbose
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: merge main to stg
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git checkout stg
+          git merge main
+          git push origin stg
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
