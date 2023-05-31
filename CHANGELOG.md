@@ -1,5 +1,12 @@
 
 
+## [0.3.1](https://github.com/ximxim/layer-test/compare/v0.3.0...v0.3.1) (2023-05-31)
+
+
+### Bug Fixes
+
+* yarn issue ([6f11d79](https://github.com/ximxim/layer-test/commit/6f11d7902e27beb279b087a55a8d6582440330ae))
+
 ## [0.3.0](https://github.com/ximxim/layer-test/compare/v0.2.1...v0.3.0) (2023-05-31)
 
 
