@@ -2,10 +2,12 @@ name: production
 on:
   push:
     branches: [main]
-    # paths:
-    #   - 'packages/**'
-    # paths-ignore:
-    #   - 'packages/**/package.json'
+    paths:
+      - 'packages/sdk'
+    paths-ignore:
+      - '**/package.json'
+      - 'CHANGELOG.md'
+      - 'packages/sdk/example/**'
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -35,3 +37,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: merge main to stg
+        run: |
+          git checkout stg
+          git merge main
+          git push origin stg
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
