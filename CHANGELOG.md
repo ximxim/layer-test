@@ -1,5 +1,12 @@
 
 
+## [0.3.0](https://github.com/ximxim/layer-test/compare/v0.2.1...v0.3.0) (2023-05-31)
+
+
+### Features
+
+* another try ([c59bd03](https://github.com/ximxim/layer-test/commit/c59bd03ac316bcdeaf0e0702373ceb7ae05b0f09))
+
 ## [0.2.1](https://github.com/ximxim/layer-test/compare/v0.2.0...v0.2.1) (2023-05-31)
 
 ## 0.2.0 (2023-05-31)
