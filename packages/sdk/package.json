@@ -1,6 +1,6 @@
 {
   "name": "@ximxim/sdk",
-  "version": "0.8.1",
+  "version": "0.8.2-nightly.0",
   "source": "src/index.ts",
   "main": "dist/main.js",
   "module": "dist/module.js",
