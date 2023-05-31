@@ -6,7 +6,6 @@ on:
       - 'packages/sdk'
     paths-ignore:
       - '**/package.json'
-      - 'CHANGELOG.md'
       - 'packages/sdk/example/**'
 jobs:
   release:
