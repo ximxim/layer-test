@@ -8,6 +8,7 @@
     "packages/**/*"
   ],
   "scripts": {
+    "release": "release-it --ci",
     "prepare": "husky install",
     "validate": "run-p lint tsc format:check",
     "tsc": "yarn workspaces foreach run tsc",

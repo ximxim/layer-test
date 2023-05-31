@@ -6,19 +6,27 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: checkout
         uses: actions/checkout@v2.3.1
         with:
           fetch-depth: 0
           persist-credentials: false
 
-      - name: Install dependencies
+      - name: install dependencies
         run: yarn
 
-      - name: Build
+      - name: build
         run: yarn build
 
-      - name: release-it
-        uses: TheRealWaldo/release-it@v0.7.2
-        with:
-          debug: true
+      - name: npm setup
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
+      - name: git config
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+
+      - name: release
+        run: npm run release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
