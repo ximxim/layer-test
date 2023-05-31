@@ -1,7 +1,7 @@
-name: sdk-release
+name: sdk-stg-release
 on:
   push:
-    branches: [main]
+    branches: [stg]
     paths:
       - 'packages/sdk/src/**'
 jobs:
@@ -29,15 +29,7 @@ jobs:
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 
       - name: release
-        run: yarn release --ci --verbose
+        run: yarn release --preRelease=nightly --ci --verbose
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: merge main to stg
-        run: |
-          git checkout stg
-          git merge main
-          git push origin stg
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAT }}
