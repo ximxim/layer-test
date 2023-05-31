@@ -2,10 +2,10 @@ name: production
 on:
   push:
     branches: [main]
-    paths:
-      - 'packages/**'
-    paths-ignore:
-      - 'packages/**/package.json'
+    # paths:
+    #   - 'packages/**'
+    # paths-ignore:
+    #   - 'packages/**/package.json'
 jobs:
   release:
     runs-on: ubuntu-latest
