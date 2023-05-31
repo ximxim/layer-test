@@ -1,5 +1,12 @@
 
 
+## [0.7.0](https://github.com/ximxim/layer-test/compare/v0.3.1...v0.7.0) (2023-05-31)
+
+
+### Features
+
+* mask pehna ([a8c6b82](https://github.com/ximxim/layer-test/commit/a8c6b823c6cbaf11f977124a4abcad3d9ee8977d))
+
 ## [0.3.1](https://github.com/ximxim/layer-test/compare/v0.3.0...v0.3.1) (2023-05-31)
 
 
