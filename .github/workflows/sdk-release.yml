@@ -48,3 +48,8 @@ jobs:
           git push origin stg
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
+
+      - name: example deploy
+        run: yarn deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
