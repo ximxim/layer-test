@@ -23,7 +23,10 @@
       "tagName": "v${version}"
     },
     "npm": {
-      "publish": true
+      "publish": true,
+      "versionArgs": [
+        "--allow-same-version"
+      ]
     },
     "github": {
       "release": true
