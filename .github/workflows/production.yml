@@ -29,9 +29,7 @@ jobs:
         run: |
           git config user.name "ximxim"
           git config user.email "ximxim@users.noreply.github.com"
-
-      - name: Setup credentials to access private repositories
-        run: git config --global url.https://${{ secrets.MY_PAT }}@github.com/.insteadOf https://github.com/
+          git remote set-url origin https://github.com/ximxim/layer-test.git
 
       - name: release
         run: npm run release
